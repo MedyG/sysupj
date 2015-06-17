@@ -1,0 +1,19 @@
+.login
+{
+    width:200px;
+    height:550px;
+}
+
+.pic4
+{
+    width:100px;
+    height:100px;
+    float:center;
+}
+.input
+{
+    float:down;
+    display:block;
+    background-color:#00BBFF;
+    height:350px;
+}

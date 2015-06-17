@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Home</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width,user-scalable=no"/>
+		<link href="home2.css" type="text/css" rel="stylesheet" />
+	</head>
+	<body>
+        <fieldset class="profile">
+			<img class="photo" src="test.jpg" alt="profile photo">
+                <pre>
+                    <em>
+                        用户名:XXX      学号:123300XX     学院:software
+                    </em>
+                </pre>
+                <input class = "logout" type="submit" value="登出" />
+        </fieldset>
+        <br>
+            <div class="kuan"style="width:330px; margin:10px auto">
+                <input name="search" type="text" value = "输入课程/教师名称"  />
+                <input type="submit" value="搜索" />
+                   <div class="agreement-border">
+                       <input type="checkbox"
+                        onclick="checkboxChecked(this);">全部
+                        <input type="checkbox"
+                        onclick="checkboxChecked(this);">教师
+                        <input type="checkbox"
+                        onclick="checkboxChecked(this);">课程
+                    </div>
+            </div>
+            <fieldset class="events">
+                <legend>我的消息</legend>
+                <pre>
+                    1.XX回复了你的评论；
+                    2.XX课程更新；
+                    3.XX资源更新；
+                </pre>
+            </fieldset>
+		    <fieldset class="courses">
+			<legend>我关注的课程</legend>
+            <div class="agreement-border">
+                <input type="checkbox"
+                    onclick="checkboxChecked(this);">软件测试<br>
+                    <input type="checkbox"
+                        onclick="checkboxChecked(this);">系统分析与设计<br>
+                        <input type="checkbox"
+                            onclick="checkboxChecked(this);">计算机图形学<br>
+                                <input type="checkbox"
+                                    onclick="checkboxChecked(this);">IT项目管理<br>
+                                    <input type="checkbox"
+                                        onclick="checkboxChecked(this);">计算机模式识别<br>
+                                        <input type="checkbox"
+                                            onclick="checkboxChecked(this);">虚拟现实<br></div>
+             <input type="submit" value="取消关注" /></fieldset>
+	</body>
+</html>

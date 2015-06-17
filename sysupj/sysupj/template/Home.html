@@ -9,27 +9,36 @@
 	</head>
 	
 	<body>
-		<div class="photo">
-			<img src="test.jpg" alt="profile photo">
-		</div>
-		
-		<div class="overview">
-			<h2 style="display:inline">系统分析与设计</h2><span class="follow">关注</span>
+        <fieldset class="profile">
+            <legend>个人信息</legend>
+			<img class="photo" src="test.jpg" alt="profile photo">
+                <p>
+                    <em><big>user name:XXX
+                            <br>
+                              student ID:123300XX
+                            <br>
+                              college:software
+                    </em></big>
+                </p>
+        </fieldset>
+        <br>
+		    <div class="overview">
+			<h2 style="display:inline">系统分析与设计</h2><span class="follow" style="color: red">关注</span>
+            <img class="pic0" src="pic0.jpg" alt="profile photo">
 			<p>地点：东校区公教楼B202</P>
-			<p>时间：1~18周</P>
+			     <p>
+                 上课时间：1~18周
+                 3~5节（09：50 ~ 12：25）</P>
 			<p>学分：3</p>
-			<p><a>任课教师: pml</a></p>
-		</div>
-		
+			<p><a>任课教师: pml</a></p></div>
 		<details class="brief">
-			<summary>课程简介<br>Curabitur in massa tristique, laoreet quam in, mattis neque......
-			</summary>
-		</details>
-		
+            <summary >课程简介<br>
+                <pre style="color: red"><big>
+                    Curabitur in massa tristique, laoreet quam in, mattis neque......<big>
+                </pre></summary></details>
 		<div class="relatedCourses">
 			相关课程：<a>工作流技术</a>
 		</div>
-		
 		<div>
 		<fieldset class="discussions">
 			<legend>讨论区</legend>
@@ -39,12 +48,9 @@
 			</select>
 			<div class="comment">
 				<img class="userIcon" src="test.jpg" alt="profile photo">
-				<div class="content"><span>JoJo</span>回复<span>abc</span>:课程作业好多
-				</div>
-				<div class="operation"><span>2015-06-16</span> <span>回复</span> <span>评论</span></div>
-			</div>
+				<div class="content"><span>JoJo</span>回复<span>abc</span>:课程作业好多</div>
+				<div class="operation"><span>2015-06-16</span> <span>回复</span> <span>评论</span> <span>关于我的</span></div></div>
 			<hr color=#282>
-			
 		</fieldset>
 		</div>
 	</body>

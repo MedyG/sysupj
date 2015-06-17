@@ -1,0 +1,18 @@
+
+.photo {
+    float: left;
+    width: 50px;
+    height: 50px;
+}
+
+.profile {
+    float: top;
+    display:block;
+    background-color:#00BBFF;
+}
+
+.logout {
+    float: right;
+}
+
+
