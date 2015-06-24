@@ -18,7 +18,10 @@ urlpatterns = patterns('',
 	#url('^hello/$', views.hello),
 	# url('^$', ua_display_good1),
 	url('^$', views.home),
-	#url('^comments/$', views.comments),
+	url('^addComment/$', views.addComment),
+	url('^register/$', views.register),
+	url('^login/$', views.login),
+	url('^logout/$', views.logout),
+	url('^profile/$', views.profile),
+    url('^upload/$', views.upload),
 )
-
-urlpatterns += staticfiles_urlpatterns

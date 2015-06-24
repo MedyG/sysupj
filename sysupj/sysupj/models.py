@@ -10,7 +10,7 @@
 from django.db import models
 
 class Student(models.Model):
-    sid = models.IntegerField(primary_key=True)
+    sid = models.AutoField(primary_key=True)
     sname = models.TextField()
     spwd = models.TextField()
     def __unicode__(self):
@@ -19,7 +19,7 @@ class Student(models.Model):
         db_table = u'student'
 
 class Course(models.Model):
-    cid = models.IntegerField(primary_key=True)
+    cid = models.AutoField(primary_key=True)
     cname = models.TextField()
     classroom = models.TextField()
     capasity = models.IntegerField()
@@ -31,17 +31,21 @@ class Course(models.Model):
         db_table = u'course'
 
 class Teacher(models.Model):
-    tid = models.IntegerField(primary_key=True)
+    tid = models.AutoField(primary_key=True)
     tname = models.TextField()
     brief = models.TextField(blank=True)
+    def __unicode__(self):
+	    return self.tname
     class Meta:
         db_table = u'teacher'
 
 class Discussion(models.Model):
-    did = models.IntegerField(primary_key=True)
+    did = models.AutoField(primary_key=True)
     poster = models.ForeignKey(Student, db_column='poster')
+    #poster = models.IntegerField()
     dtype = models.IntegerField()
-    target = models.ForeignKey(Course, null=True, db_column='target', blank=True)
+    #target = models.ForeignKey(Course, null=True, db_column='target', blank=True)
+    target = models.IntegerField()
     content = models.TextField(blank=True)
     def __unicode__(self):
 	    return self.content
@@ -49,30 +53,31 @@ class Discussion(models.Model):
         db_table = u'discussion'
 
 class Followings(models.Model):
-    id = models.IntegerField(primary_key=True)
+    id = models.AutoField(primary_key=True)
     follower = models.ForeignKey(Student, null=True, db_column='follower', blank=True)
     followee = models.ForeignKey(Course, null=True, db_column='followee', blank=True)
     class Meta:
         db_table = u'followings'
 
 class Material(models.Model):
-    mid = models.IntegerField(primary_key=True)
+    mid = models.AutoField(primary_key=True)
     uploader = models.ForeignKey(Student, db_column='uploader')
     course = models.ForeignKey(Course, db_column='course')
     filepath = models.TextField()
+    name = models.TextField()
     class Meta:
         db_table = u'material'
 
-class Ratnig(models.Model):
-    rid = models.IntegerField(primary_key=True)
+class Rating(models.Model):
+    rid = models.AutoField(primary_key=True)
     rater = models.ForeignKey(Student, db_column='rater')
     target = models.ForeignKey(Teacher, db_column='target')
     rating = models.IntegerField()
     class Meta:
-        db_table = u'ratnig'
+        db_table = u'rating'
 
 class Teachings(models.Model):
-    id = models.IntegerField(primary_key=True)
+    id = models.AutoField(primary_key=True)
     teacher = models.ForeignKey(Teacher, db_column='teacher')
     course = models.ForeignKey(Course, db_column='course')
     class Meta:

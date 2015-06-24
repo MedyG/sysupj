@@ -21,7 +21,7 @@ try:
         'PORT'  : sae.const.MYSQL_PORT,
         }
     }
-    DEBUG = False
+    DEBUG = True
 except:
     DATABASES = {
         'default': {
@@ -46,6 +46,7 @@ DATABASES = {
     }
 }
 '''
+FILE_UPLOAD_MAX_MEMORY_SIZE = 20971520
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
 # although not all choices may be available on all operating systems.
@@ -80,12 +81,12 @@ MEDIA_ROOT = ''
 # trailing slash.
 # Examples: "http://media.lawrence.com/media/", "http://example.com/media/"
 MEDIA_URL = ''
-
+SITE_ROOT = os.path.join(os.path.abspath(os.path.dirname(__file__)),'')
 # Absolute path to the directory static files should be collected to.
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/home/media/media.lawrence.com/static/"
-STATIC_ROOT = os.path.join(os.path.dirname(os.path.dirname(__file__)),'static').replace('\\','/')
+STATIC_ROOT = os.path.join(SITE_ROOT,'static')
 
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
@@ -96,7 +97,8 @@ STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-	os.path.join(os.path.dirname(os.path.dirname(__file__)),'static').replace('\\','/')
+	("css", os.path.join(STATIC_ROOT,'css')),
+    ("js", os.path.join(STATIC_ROOT,'js')),
 )
 
 # List of finder classes that know how to find static files in
@@ -140,11 +142,11 @@ TEMPLATE_DIRS = (
 )
 
 INSTALLED_APPS = (
-    #'django.contrib.auth',
-    #'django.contrib.contenttypes',
-    #'django.contrib.sessions',
-    #'django.contrib.sites',
-    #'django.contrib.messages',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.sites',
+    'django.contrib.messages',
     'django.contrib.staticfiles',
     'sysupj',
 	#'django.contrib.comments',
