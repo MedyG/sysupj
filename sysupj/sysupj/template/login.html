@@ -5,24 +5,28 @@
 		<title>login</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta name="viewport" content="width=device-width,user-scalable=no"/>
-		<link href="login.css" type="text/css" rel="stylesheet" />
+		<link href="/static/css/login.css" type="text/css" rel="stylesheet" />
 	</head>
+	
 	<body>
         <fieldset class="login" style="width:230px; margin:0px auto">
             <legend>login</legend>
-			<img class="pic4" src="pic4.jpg" alt="profile photo" >
+			<img class="pic4" src="http://sysupj-pic.stor.sinaapp.com/pic4.jpg" alt="profile photo" >
                 <br><br><br>
+                
 		   <div class = "input" align = "center">
-            <form action="form_action.asp" method="get">
+            <form method="post">
                 <br>
                 <span>账号:</span><input type="text" name="uname" />
                 <br><br>
-                <span>密码:</span><input type="text" name="pw" />
+                <span>密码:</span><input type="password" name="pw" />
                 <br><br>
-                <input type="submit" value="登录" />
-                <input type="submit" value="注册" />
+                <input type="submit" formaction="/login/" value="登录" />
+                <input type="submit" formaction="/register/" value="注册" />
                 <br><br>
             </form>
+            
+           
             <div class = "select">
                 <br>
                 <div class="agreement-border">
@@ -33,11 +37,13 @@
                         name="agreement"
                         onclick="checkboxChecked(this);">记住我</a>
                         </div>
+   
 			<select>
 				<option value="niMing">实名登陆</option>
 				<option value="youKe">游客登陆</option>
                 <option value="shiMing">匿名登陆</option>
 			</select>
+        
             <input class = "forgrtPW"  type="submit" value="忘记密码" />
             </div>
             </div>

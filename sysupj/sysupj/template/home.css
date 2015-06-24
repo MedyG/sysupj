@@ -1,4 +1,3 @@
-
 .photo {
     float: left;
     width: 100px;
@@ -6,27 +5,47 @@
 }
 
 .overview {
-display: block;
-
-height: 180px;
+	display: block;
 }
+
+.follow {
+	margin: 10px;
+}
+
 .pic0 {
     float: left;
     width: 150px;
     height: 180px;
 }
-.userIcon {
-float: left;
-width: 60px;
-height: 60px;
+.icon {
+	margin: 5px;
+	float: left;
+	width: 60px;
+	height: 60px;
+}
+
+.material {
+	margin-top: 10px;
+	overflow: hidden;
 }
 
 .comment {
-
-overflow: hidden;
+	margin-top: 10px;
+	overflow: hidden;
 }
 
 .operation {
-float: right;
-clear: left;
+	float: right;
+	clear: left;
+}
+
+.commentBtn {
+	padding: 5px;
+	display: inline-block;
+	float: right;
+}
+
+.relatedCourses {
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
